@@ -22,6 +22,8 @@ import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.messaging.FirebaseMessaging;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -29,11 +31,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
+@Slf4j
 @Configuration
+@ConditionalOnProperty(prefix = "firebase", name = "project-id")
 public class FcmConfig {
 
     @Bean
     public FirebaseApp firebaseApp(FcmProperties properties) throws IOException {
+        log.info("Initializing Firebase Cloud Messaging provider for project: {}", properties.getProjectId());
         FirebaseOptions.Builder builder = FirebaseOptions.builder();
         if (properties.getCredentialsPath() != null && !properties.getCredentialsPath().isBlank()) {
             try (FileInputStream serviceAccount = new FileInputStream(properties.getCredentialsPath())) {
