@@ -15,9 +15,9 @@
  */
 
 
-package com.firefly.core.notifications.provider.firebase.config.v1;
+package com.firefly.core.notifications.providers.firebase.config.v1;
 
-import com.firefly.core.notifications.provider.firebase.properties.v1.FcmProperties;
+import com.firefly.core.notifications.providers.firebase.properties.v1.FcmProperties;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;

@@ -15,7 +15,7 @@
  */
 
 
-package com.firefly.core.notifications.provider.firebase.properties.v1;
+package com.firefly.core.notifications.providers.firebase.properties.v1;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

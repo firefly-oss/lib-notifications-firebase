@@ -15,7 +15,7 @@
  */
 
 
-package com.firefly.core.notifications.provider.firebase.core.v1;
+package com.firefly.core.notifications.providers.firebase.core.v1;
 
 import com.firefly.core.notifications.interfaces.dtos.push.v1.PushNotificationRequest;
 import com.firefly.core.notifications.interfaces.dtos.push.v1.PushNotificationResponse;
