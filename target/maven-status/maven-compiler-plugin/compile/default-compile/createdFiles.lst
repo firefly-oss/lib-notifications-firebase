@@ -1,0 +1,3 @@
+com/firefly/core/notifications/provider/firebase/config/v1/FcmConfig.class
+com/firefly/core/notifications/provider/firebase/properties/v1/FcmProperties.class
+com/firefly/core/notifications/provider/firebase/core/v1/FcmPushProvider.class
